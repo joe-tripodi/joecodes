@@ -1,0 +1,67 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.rich_textarea :body %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.textarea :status %>
+  </div>
+
+  <div>
+    <%= form.label :published_date, style: "display: block" %>
+    <%= form.date_field :published_date %>
+  </div>
+
+  <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label :home_loan, style: "display: block" %>
+    <%= form.text_field :home_loan %>
+  </div>
+
+  <div>
+    <%= form.label :savings, style: "display: block" %>
+    <%= form.text_field :savings %>
+  </div>
+
+  <div>
+    <%= form.label :investments, style: "display: block" %>
+    <%= form.text_field :investments %>
+  </div>
+
+  <div>
+    <%= form.label :income, style: "display: block" %>
+    <%= form.text_field :income %>
+  </div>
+
+  <div>
+    <%= form.label :crypto, style: "display: block" %>
+    <%= form.text_field :crypto %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
