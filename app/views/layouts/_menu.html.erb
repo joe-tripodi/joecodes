@@ -1,6 +1,10 @@
-<ul>
-  <li><%= link_to "Home", root_path %></li>
-  <li>About</li>
-  <li><%= link_to "Blog", posts_path %></li>
-  <li>Projects</li>
-</ul>
+<nav>
+  <div class="flex flex-col items-center p-2">
+      <ul class="flex gap-4 rounded-full bg-white/90 px-3 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur"
+      <li><%= link_to "Home", root_path, class: "relative block px-3 py-2.5 transition  hover:text-primary-600" %></li>
+      <li><%= link_to "About", "#", class: "relative block px-3 py-2.5 transition  hover:text-primary-600"%> </li>
+      <li><%= link_to "Blog", posts_path, class: "relative block px-3 py-2.5 transition  hover:text-primary-600 " %></li>
+      <li><%= link_to "Projects", "#", class: "relative block px-3 py-2.5 transition  hover:text-primary-600"%> </li>
+    </ul>
+  </div>
+</nav>
