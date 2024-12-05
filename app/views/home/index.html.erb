@@ -1,1 +1,10 @@
-<h1>Joe Tripodi</h1>
+<div class="flex flex-col gap-8">
+  <%= image_tag("joe.png", size: "250x250", class: "rounded-xl -rotate-2", alt: "image of joe") %>
+  <h2 class="text-3xl font-bold">I'm Joe Tripodi, a creator of things</h2>
+  <p class="text-xl text-gray-600">
+    Keeping the <span class="text-primary-600 font-bold">spark</span> of programming alive
+    by creating and building web applications using
+    <span class="text-red-500">Rails</span>.
+  </p>
+  <%= render 'components/personal_links' %>
+</div>

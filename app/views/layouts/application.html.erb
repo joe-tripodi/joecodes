@@ -23,15 +23,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="flex h-full">
-    <div class="flex flex-col w-full">
+  <body class="flex h-full w-full bg-gray-100 items-center flex-col">
+    <div class="bg-white px-10 pb-5 h-full w-11/12">
       <header class="md:block hidden">
         <%= render "layouts/menu" %>
       </header>
       <header class="md:hidden">
         <%= render "layouts/mobile_menu" %>
       </header>
-      <main>
+      <main class="pt-4">
         <%= yield %>
       </main>
     </div>
