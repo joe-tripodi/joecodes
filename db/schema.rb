@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_04_103241) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_06_014148) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -62,6 +62,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_103241) do
     t.float "crypto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "summary"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

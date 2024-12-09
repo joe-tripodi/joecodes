@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order(published_date: "asc")
   end
 
   # GET /posts/1 or /posts/1.json
@@ -65,6 +65,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.expect(post: [ :title, :body, :status, :published_date, :author, :home_loan, :savings, :investments, :income, :crypto ])
+      params.expect(post: [ :title, :body, :summary, :status, :published_date, :author, :home_loan, :savings, :investments, :income, :crypto ])
     end
 end
