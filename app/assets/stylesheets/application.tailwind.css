@@ -17,3 +17,8 @@
     color: rgb(var(--text-primary));
   }
 }
+
+.trix-editor a {
+  color: rgb(var(--text-primary));
+  text-decoration: underline;
+}
