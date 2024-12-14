@@ -1,17 +1,13 @@
 # Name of your application. Used to uniquely configure containers.
-service: tripodi
+service: flow_of_code
 
 # Name of the container image.
-image: tripodi/flowofcode
+image: tripodi/flow_of_code
 
 # Deploy to these servers.
 servers:
   web:
     - 204.48.19.161
-  # job:
-  #   hosts:
-  #     - 192.168.0.1
-  #   cmd: bin/jobs
 
 registry:
   # Specify the registry server, if you're not using Docker Hub
@@ -27,8 +23,6 @@ builder:
   # Inject ENV variables into containers (secrets come from .kamal/secrets).
   #
 env:
-  clear:
-    DB_HOST: 192.168.0.2
   secret:
     - RAILS_MASTER_KEY
 
