@@ -20,15 +20,17 @@ registry:
 builder:
   arch: amd64
 
-  # Inject ENV variables into containers (secrets come from .kamal/secrets).
-  #
-env:
-  secret:
-    - RAILS_MASTER_KEY
 
 # Persistent storage
 volumes:
-  - "app_storage:/app/storage"
+  - "/db:/rails/sqlite"
+  - "/storage:/rails/storage"
+
+# Inject ENV variables into containers (secrets come from .kamal/secrets).
+#
+env:
+  secret:
+    - RAILS_MASTER_KEY
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal logs -r job" will tail logs from the first server in the job section.
