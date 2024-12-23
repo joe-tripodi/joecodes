@@ -8,3 +8,12 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+.trix-editor a {
+  color: rgb(9, 130, 92);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.trix-content img {
+  border-radius: 20px;
+}
