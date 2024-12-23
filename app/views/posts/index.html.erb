@@ -1,7 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
 <% content_for :title, "Blog Posts" %>
 <% content_for :description, "Blog posts by Joe Tripodi" %>
+
+<p style="color: green"><%= notice %></p>
+
 
 <div class="flex flex-col gap-2" id="posts">
   <% @posts.each do |post| %>
