@@ -16,6 +16,10 @@
   .text-primary-600 {
     color: rgb(var(--text-primary));
   }
+
+  .text-red-highlight {
+    color: rgb(168, 63, 63);
+  }
 }
 
 .trix-editor a {
