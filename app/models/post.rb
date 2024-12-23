@@ -5,7 +5,9 @@ class Post < ApplicationRecord
   has_rich_text :body
 
   def published_date_formatted
-    self.published_date.strftime('%d %b %Y')
+    unless self.published_date.nil?
+      self.published_date.strftime("%d %b %Y")
+    end
   end
 
   private

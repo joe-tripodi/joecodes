@@ -24,7 +24,8 @@
   </head>
 
   <body class="flex h-full w-full bg-gray-100 items-center flex-col">
-    <div class="bg-white px-10 pb-5 h-full w-11/12">
+    <div class="px-10 pb-5 h-full w-full">
+      <div class="bg-white max-w-7xl mx-auto px-10 pb-10">
       <header class="md:block hidden">
         <%= render "layouts/menu" %>
       </header>
@@ -34,6 +35,7 @@
       <main class="pt-4">
         <%= yield %>
       </main>
+      </div>
     </div>
   </body>
 </html>
