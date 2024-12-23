@@ -23,6 +23,7 @@
 }
 
 .trix-editor a {
-  color: rgb(var(--text-primary));
+  color: rgb(9, 130, 92);
+  font-weight: bold;
   text-decoration: underline;
 }
