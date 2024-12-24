@@ -1,10 +1,16 @@
-<%= link_to post do %>
+<%= link_to post, class: "md:max-w-2xl" do %>
   <div class="flex flex-col gap-2 transition-colors duration-100 ease-linear hover:bg-slate-50 p-5 rounded-xl" id="<%= dom_id post %>">
     <div>
       <p class="font-bold text-lg"><%= post.title %></p>
     </div>
     <div>
-      <p class="text-md text-gray-600"><%= post.summary %></p>
+      <p class="text-md text-gray-600">
+      <% if post.summary.length > 100 %>
+        <%= post.summary[0..100]... %>
+      <% else %>
+        <%= post.summary %>
+      <% end %>
+      </p>
     </div>
     <div>
       <span class="text-primary-600"> Read post ></span>
