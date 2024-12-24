@@ -1,5 +1,10 @@
 <% content_for :title, @post.title %>
 <% content_for :description, @post.summary %>
+<% content_for :og_title, @post.title %>
+<% content_for :og_description, @post.summary %>
+<% content_for :og_description, @post.summary %>
+<% content_for :og_type, "article" %>
+<% content_for :og_url, post_url(@post) %>
 
 <p style="color: green"><%= notice %></p>
 
