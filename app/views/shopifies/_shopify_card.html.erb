@@ -1,0 +1,19 @@
+<%= link_to shopify, class: "md:max-w-2xl" do %>
+  <div class="flex flex-col gap-2 transition-colors duration-100 ease-linear hover:bg-slate-50 p-5 rounded-xl" id="<%= dom_id shopify %>">
+    <div>
+      <p class="font-bold text-lg"><%= shopify.title %></p>
+    </div>
+    <div>
+      <p class="text-md text-gray-600">
+      <% if shopify.summary.length > 100 %>
+        <%= shopify.summary[0..100]... %>
+      <% else %>
+        <%= shopify.summary %>
+      <% end %>
+      </p>
+    </div>
+    <div>
+      <span class="text-primary-600"> Learn more ></span>
+    </div>
+  </div>
+<% end %>

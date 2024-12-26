@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shopifies
   resources :projects
   resource :session
   resources :passwords, param: :token

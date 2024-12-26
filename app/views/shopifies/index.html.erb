@@ -1,0 +1,13 @@
+<% content_for :title, "All Shopify Projects" %>
+<% content_for :description, "Shopify Projects created by Joe Tripodi" %>
+
+<% if notice.present? %>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<% end %>
+
+<div class="flex flex-col gap-2" id="shopifies">
+  <% @shopifies.each do |shopify| %>
+    <%= render "shopify_card", shopify: shopify %>
+  <% end %>
+</div>
+

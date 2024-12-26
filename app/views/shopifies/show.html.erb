@@ -1,0 +1,15 @@
+<% content_for :title, @shopify.title %>
+<% content_for :description, @shopify.summary %>
+<% content_for :og_title, @shopify.title %>
+<% content_for :og_description, @shopify.summary %>
+<% content_for :og_description, @shopify.summary %>
+<% content_for :og_type, "article" %>
+<% content_for :og_url, shopify_url(@shopify) %>
+
+<p style="color: green"><%= notice %></p>
+
+<div class="flex items-center justify-center">
+<div class="max-w-3xl">
+  <%= render @shopify %>
+</div>
+</div>
