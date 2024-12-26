@@ -1,0 +1,35 @@
+<div id="<%= dom_id project %>">
+  <h1 class="text-3xl font-bold">
+    <%= project.title %>
+  </h1>
+
+  <p class="italic">
+    <%= project.completion_date %>
+  </p>
+
+  <br/>
+
+  <% unless project.url.empty? %>
+    <div class="underline">
+      <%= link_to "Project Url", project.url %>
+    </div>
+  <% end %>
+
+  <% unless project.repo.empty? %>
+    <div class="underline">
+      <%= link_to "Project Repo", project.repo %>
+    </div>
+  <% end %>
+
+  <br/>
+  <p class="italic">
+    <%= project.summary %>
+  </p>
+
+  <div class="trix-editor pt-5">
+    <%= project.body %>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,24 @@
+<% content_for :title, @project.title %>
+<% content_for :description, @project.summary %>
+<% content_for :og_title, @project.title %>
+<% content_for :og_description, @project.summary %>
+<% content_for :og_description, @project.summary %>
+<% content_for :og_type, "article" %>
+<% content_for :og_url, project_url(@project) %>
+
+<p style="color: green"><%= notice %></p>
+
+<div class="flex items-center justify-center">
+<div class="max-w-3xl">
+  <%= render @project %>
+</div>
+</div>
+
+<% unless true %>
+<div>
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div>
+<% end %>
